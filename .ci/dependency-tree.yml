@@ -1,0 +1,21 @@
+version: "2.1"
+dependencies:
+  - project: AAInternal/OS_A
+  - project: AAInternal/OS_B
+    dependencies:
+      - project: AAInternal/OS_A
+  - project: AAInternal/OS_C
+    dependencies:
+      - project: AAInternal/OS_B
+  - project: AAInternal/OS_D
+    dependencies:
+      - project: AAInternal/OS_C
+  - project: AAInternal/OS_DTest1
+    dependencies:
+      - project: AAInternal/OS_D
+  - project: AAInternal/OS_DTest2
+    dependencies:
+      - project: AAInternal/OS_D
+  - project: AAInternal/OS_DTest3
+    dependencies:
+      - project: AAInternal/OS_D

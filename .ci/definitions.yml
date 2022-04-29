@@ -1,0 +1,16 @@
+version: "2.1"
+dependencies: https://raw.githubusercontent.com/AAInternal/OS_A/main/.ci/dependency-tree.yml?token=GHSAT0AAAAAABSP5OD7Z6TXRMMPRNPPWLMOYTMFUEQ
+default:
+  build-command:
+    upstream: mvn clean install --batch-mode --settings settings.xml -DskipTests -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
+    current: mvn clean install --batch-mode --settings settings.xml -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
+  build:
+    - project: AAInternal/OS_DTest1
+      build-command:
+        current: mvn test --batch-mode --settings settings.xml -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
+    - project: AAInternal/OS_DTest2
+      build-command:
+        current: mvn test --batch-mode --settings settings.xml -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
+    - project: AAInternal/OS_DTest3
+      build-command:
+        current: mvn test --batch-mode --settings settings.xml -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}

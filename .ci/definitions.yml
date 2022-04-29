@@ -1,5 +1,5 @@
 version: "2.1"
-dependencies: https://raw.githubusercontent.com/AAInternal/OS_A/main/.ci/dependency-tree.yml?token=GHSAT0AAAAAABSP5OD7Z6TXRMMPRNPPWLMOYTMFUEQ
+dependencies: https://raw.githubusercontent.com/bakoontz2/OS_CI/master/.ci/dependency-tree.yml
 default:
   build-command:
     upstream: mvn clean install --batch-mode --settings settings.xml -DskipTests -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}

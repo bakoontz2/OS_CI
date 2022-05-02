@@ -28,6 +28,9 @@ dependencies:
         AAInternal/OS_NP-JAF:
           - source: mavenize-test
             target: mavenize-test
+        OS_NP-JAF:
+          - source: mavenize-test
+            target: mavenize-test
   - project: AAInternal/OS_FNG
     dependencies:
       - project: AAInternal/OS_Core

@@ -24,6 +24,12 @@ dependencies:
         default:
           - source: master-test
             target: master-test
+        AAInternal/OS_NP-JAF:
+          - source: mavenize-test
+            target: mavenize-test
+        OS_NP-JAF:
+          - source: mavenize-test
+            target: mavenize-test
       dependencies:
         AAInternal/OS_NP-JAF:
           - source: mavenize-test

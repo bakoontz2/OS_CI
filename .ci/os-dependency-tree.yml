@@ -14,7 +14,7 @@ dependencies:
       - project: AAInternal/OS_Core
   - project: AAInternal/OS_FNG
     dependencies:
-      - project: AAInternal/OS_CAL
+      - project: AAInternal/SP_CAL
   - project: AAInternal/OS_FNOM
     dependencies:
       - project: AAInternal/OS_FNG

@@ -2,9 +2,6 @@ version: "2.1"
 dependencies:
   - project: AAInternal/OS_NP-JAF
     mapping:
-      default:
-        - source: mavenize-test
-          target: mavenize-test
       dependencies:
         default:
           - source: mavenize-test
@@ -27,6 +24,10 @@ dependencies:
         default:
           - source: master-test
             target: master-test
+      dependencies:
+        AAInternal/OS_NP-JAF:
+          - source: mavenize-test
+            target: mavenize-test
   - project: AAInternal/OS_FNG
     dependencies:
       - project: AAInternal/OS_Core

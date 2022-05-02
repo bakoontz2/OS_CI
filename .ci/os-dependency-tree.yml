@@ -27,10 +27,6 @@ dependencies:
         default:
           - source: master-test
             target: master-test
-      dependencies:
-        default:
-          - source: mavenize-test
-            target: mavenize-test
   - project: AAInternal/OS_FNG
     dependencies:
       - project: AAInternal/OS_Core

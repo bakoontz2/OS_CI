@@ -22,8 +22,8 @@ dependencies:
     mapping:
       dependant:
         default:
-          - source: master-test
-            target: master-test
+          - source: mavenize-test
+            target: mavenize-test
         AAInternal/OS_NP-JAF:
           - source: mavenize-test
             target: mavenize-test

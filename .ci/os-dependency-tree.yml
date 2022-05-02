@@ -14,6 +14,10 @@ dependencies:
         default:
           - source: CAL_AVN17.3.11.0
             target: CAL_AVN17.3.11.0
+      dependencies:
+        default:
+          - source: mavenize-test
+            target: mavenize-test
   - project: AAInternal/OS_Core
     dependencies:
       - project: AAInternal/SP_CAL

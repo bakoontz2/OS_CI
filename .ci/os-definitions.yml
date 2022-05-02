@@ -1,5 +1,5 @@
 version: "2.1"
-dependencies: https://raw.githubusercontent.com/bakoontz2/OS_CI/master/.ci/dependency-tree.yml
+dependencies: https://raw.githubusercontent.com/bakoontz2/OS_CI/master/.ci/os-dependency-tree.yml
 default:
   build-command:
     upstream: mvn clean install deploy --batch-mode --settings settings.xml -DskipTests -Drevision=${{ env.REVISION }} -Dversion_prefix=${{ env.VERSION_PREFIX }} -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}

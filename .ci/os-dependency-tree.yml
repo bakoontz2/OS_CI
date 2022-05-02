@@ -6,6 +6,10 @@ dependencies:
         default:
           - source: mavenize-test
             target: mavenize-test
+      dependencies:
+        default:
+          - source: mavenize-test
+            target: mavenize-test
   - project: AAInternal/SP_CAL
     dependencies:
       - project: AAInternal/OS_NP-JAF
@@ -16,8 +20,8 @@ dependencies:
             target: CAL_AVN17.3.11.0
       dependencies:
         default:
-          - source: mavenize-test
-            target: mavenize-test
+          - source: CAL_AVN17.3.11.0
+            target: CAL_AVN17.3.11.0
   - project: AAInternal/OS_Core
     dependencies:
       - project: AAInternal/SP_CAL

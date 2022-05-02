@@ -7,8 +7,6 @@ dependencies:
           - source: mavenize-test
             target: mavenize-test
   - project: AAInternal/SP_CAL
-    dependencies:
-      - project: AAInternal/OS_NP-JAF
     mapping:
       dependant:
         default:
@@ -16,7 +14,12 @@ dependencies:
             target: CAL_AVN17.3.11.0
   - project: AAInternal/OS_Core
     dependencies:
-      - project: AAInternal/SP_CAL
+      - project: AAInternal/OS_NP-JAF
+    mapping:
+      dependant:
+        default:
+          - source: master-test
+            target: master-test
   - project: AAInternal/OS_FNG
     dependencies:
       - project: AAInternal/OS_Core

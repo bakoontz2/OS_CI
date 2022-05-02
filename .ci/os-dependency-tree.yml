@@ -6,15 +6,24 @@ dependencies:
         default:
           - source: mavenize-test
             target: mavenize-test
-  - project: AAInternal/OS_Core
+  - project: AAInternal/SP_CAL
     dependencies:
       - project: AAInternal/OS_NP-JAF
-  - project: AAInternal/OS_CAL
-    dependencies:
-      - project: AAInternal/OS_Core
-  - project: AAInternal/OS_FNG
+    mapping:
+      dependant:
+        default:
+          - source: CAL_AVN17.3.11.0
+            target: CAL_AVN17.3.11.0
+      dependencies:
+        default:
+          - source: CAL_AVN17.3.11.0
+            target: CAL_AVN17.3.11.0
+  - project: AAInternal/OS_Core
     dependencies:
       - project: AAInternal/SP_CAL
+  - project: AAInternal/OS_FNG
+    dependencies:
+      - project: AAInternal/OS_Core
   - project: AAInternal/OS_FNOM
     dependencies:
       - project: AAInternal/OS_FNG

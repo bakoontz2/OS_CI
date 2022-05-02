@@ -9,3 +9,11 @@ build:
     build-command:
       upstream: mvn clean install --batch-mode --settings settings.xml -DskipTests -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
       current: mvn clean install --batch-mode --settings settings.xml -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
+  - project: AAInternal/SP_CAL
+    build-command:
+      upstream: |
+        export ANT_OPTS=-Xmx20012m -Djava.util.Arrays.useLegacyMergeSort=true
+        ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile build.xml jar
+      current: |
+        export ANT_OPTS=-Xmx20012m -Djava.util.Arrays.useLegacyMergeSort=true
+        ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile build.xml test-unit jar

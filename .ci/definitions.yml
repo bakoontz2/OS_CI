@@ -1,16 +1,11 @@
 version: "2.1"
-dependencies: https://raw.githubusercontent.com/bakoontz2/OS_CI/master/.ci/dependency-tree.yml
+dependencies: https://raw.githubusercontent.com/bakoontz2/OS_CI/master/.ci/os-dependency-tree.yml
 default:
   build-command:
     upstream: mvn clean install deploy --batch-mode --settings settings.xml -DskipTests -Drevision=${{ env.REVISION }} -Dversion_prefix=${{ env.VERSION_PREFIX }} -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
     current: mvn clean install deploy --batch-mode --settings settings.xml -Drevision=${{ env.REVISION }} -Dversion_prefix=${{ env.VERSION_PREFIX }} -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
   build:
-    - project: AAInternal/OS_DTest1
+    - project: AAInternal/OS_NP-JAF
       build-command:
-        current: mvn test --batch-mode --settings settings.xml -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
-    - project: AAInternal/OS_DTest2
-      build-command:
-        current: mvn test --batch-mode --settings settings.xml -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
-    - project: AAInternal/OS_DTest3
-      build-command:
-        current: mvn test --batch-mode --settings settings.xml -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
+        upstream: mvn clean install --batch-mode --settings settings.xml -DskipTests -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
+        current: mvn clean install --batch-mode --settings settings.xml -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}

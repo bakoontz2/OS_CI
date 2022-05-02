@@ -1,0 +1,20 @@
+version: "2.1"
+dependencies:
+  - project: AAInternal/OS_NP-JAF
+    mapping:
+      dependant:
+        default:
+          - source: mavenize-test
+            target: mavenize-test
+  - project: AAInternal/OS_Core
+    dependencies:
+      - project: AAInternal/OS_NP-JAF
+  - project: AAInternal/OS_CAL
+    dependencies:
+      - project: AAInternal/OS_Core
+  - project: AAInternal/OS_FNG
+    dependencies:
+      - project: AAInternal/OS_CAL
+  - project: AAInternal/OS_FNOM
+    dependencies:
+      - project: AAInternal/OS_FNG

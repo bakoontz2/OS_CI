@@ -32,7 +32,7 @@ dependencies:
             target: mavenize-test
       dependencies:
         AAInternal/OS_NP-JAF:
-          - source: mavenize-test
+          - source: master-test
             target: mavenize-test
         OS_NP-JAF:
           - source: mavenize-test

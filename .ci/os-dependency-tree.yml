@@ -20,22 +20,9 @@ dependencies:
     dependencies:
       - project: AAInternal/OS_NP-JAF
     mapping:
-      dependant:
-        default:
-          - source: mavenize-test
-            target: mavenize-test
-        AAInternal/OS_NP-JAF:
-          - source: mavenize-test
-            target: mavenize-test
-        OS_NP-JAF:
-          - source: mavenize-test
-            target: mavenize-test
       dependencies:
         AAInternal/OS_NP-JAF:
           - source: master-test
-            target: mavenize-test
-        OS_NP-JAF:
-          - source: mavenize-test
             target: mavenize-test
   - project: AAInternal/OS_FNG
     dependencies:

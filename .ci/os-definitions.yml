@@ -26,4 +26,4 @@ build:
         ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile build.xml jar
       current: |
         export ANT_OPTS=-Xmx20012m -Djava.util.Arrays.useLegacyMergeSort=true
-        ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile build.xml test-unit jar
+        ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile buildForHudson.xml test-unit jar

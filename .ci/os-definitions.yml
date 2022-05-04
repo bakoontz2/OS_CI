@@ -20,6 +20,8 @@ build:
         export ANT_OPTS=-Xmx20012m -Djava.util.Arrays.useLegacyMergeSort=true
         ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile build.xml test-unit jar
   - project: AAInternal/OS_Core
+    archive-artifacts:
+      path: test/reports
     build-command:
       upstream: |
         export ANT_OPTS=-Xmx20012m -Djava.util.Arrays.useLegacyMergeSort=true

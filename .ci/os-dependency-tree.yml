@@ -23,7 +23,7 @@ dependencies:
       dependencies:
         AAInternal/OS_NP-JAF:
           - source: master-test
-            target: mavenize-test
+            target: master
   - project: AAInternal/OS_FNG
     dependencies:
       - project: AAInternal/OS_Core

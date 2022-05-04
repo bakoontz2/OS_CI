@@ -23,7 +23,7 @@ dependencies:
       dependencies:
         AAInternal/OS_NP-JAF:
           - source: master-test
-            target: master
+            target: master-test
   - project: AAInternal/OS_FNG
     dependencies:
       - project: AAInternal/OS_Core

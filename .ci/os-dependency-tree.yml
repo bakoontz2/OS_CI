@@ -19,11 +19,15 @@ dependencies:
   - project: AAInternal/OS_Core
     dependencies:
       - project: AAInternal/OS_NP-JAF
+      - project: AAInternal/SP_CAL
     mapping:
       dependencies:
         AAInternal/OS_NP-JAF:
           - source: master-test
             target: master-test
+        AAInternal/SP_CAL:
+          - source: master-test
+            target: CAL_AVN17.3.11.0-test
   - project: AAInternal/OS_FNG
     dependencies:
       - project: AAInternal/OS_Core

@@ -1,0 +1,5 @@
+version: "2.1"
+dependencies: https://raw.githubusercontent.com/bakoontz2/OS_CI/master/.ci/cifs-dependency-tree.yml
+default:
+  build-command:
+    current: gh workflow run build.yml -R AAInternal/OS_CloseInForecastService_Common --ref master 

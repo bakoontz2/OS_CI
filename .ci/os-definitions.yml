@@ -7,7 +7,9 @@ default:
 build:
   - project: AAInternal/OS_NP-JAF
     build-command:
-      upstream: mvn clean install --batch-mode --settings settings.xml -DskipTests -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
+      upstream: |
+        export ANT_OPTS=-Xmx20012m -Djava.util.Arrays.useLegacyMergeSort=true
+        ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile build.xml jar
       current: mvn clean install --batch-mode --settings settings.xml -Dartifactory.username=${{ env.CIFS_ZID_USER }} -Dartifactory.password=${{ env.CIFS_ZID_KEY }}
   - project: AAInternal/SP_CAL
     build-command:
@@ -18,10 +20,12 @@ build:
         export ANT_OPTS=-Xmx20012m -Djava.util.Arrays.useLegacyMergeSort=true
         ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile build.xml test-unit jar
   - project: AAInternal/OS_Core
+    archive-artifacts:
+      path: test/reports/@failure
     build-command:
       upstream: |
         export ANT_OPTS=-Xmx20012m -Djava.util.Arrays.useLegacyMergeSort=true
         ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile build.xml jar
       current: |
         export ANT_OPTS=-Xmx20012m -Djava.util.Arrays.useLegacyMergeSort=true
-        ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile build.xml test-unit jar
+        ant -Dcheckoutroot.path=../ -Dsandbox.path= -Djunit.report.format=xml -noinput -buildfile buildForHudson.xml test-unit jar
